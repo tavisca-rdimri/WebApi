@@ -14,11 +14,11 @@ namespace WebApi
     {
         public static void Main(string[] args)
         {
-            CreateWebHostBuilder(args).UseUrls(urls: "http://*:3456").Build().Run();
+            CreateWebHostBuilder(args).Build().Run();
         }
 
         public static IWebHostBuilder CreateWebHostBuilder(string[] args) =>
             WebHost.CreateDefaultBuilder(args)
-                .UseStartup<Startup>();
+                .UseStartup<Startup>()..UseUrls(urls: "http://*:3456");;
     }
 }
