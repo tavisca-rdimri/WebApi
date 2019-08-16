@@ -15,6 +15,13 @@ pipeline {
                 bat 'dotnet test XUnitTestProject1/XUnitTestProject1.csproj -p:Configiration=release -v:q'
             }
         }
+        stage('Publish') {
+        	
+        	steps{
+        		echo 'Publishing project'
+        		bat 'dotnet publish'
+        	}
+        }
 
           stage('deploy') {
             steps {
