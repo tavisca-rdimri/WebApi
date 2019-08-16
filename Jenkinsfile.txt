@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('build') {
             steps {
-                sh 'dotnet build WebAPI.sln -p:Configuration=release -v:q'
+                sh 'dotnet build WebApi.sln -p:Configuration=release -v:q'
             
                 sh 'echo deleted workspace'
             }
@@ -18,7 +18,7 @@ pipeline {
 
          stage('deploy') {
             steps {
-                sh 'dotnet WebAPI/bin/Release/netcoreapp2.2/WebAPI.dll'
+                sh 'dotnet WebApi/bin/Release/netcoreapp2.2/WebApi.dll'
             }
         }
     }
