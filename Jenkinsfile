@@ -16,26 +16,6 @@ pipeline {
             }
         }
 
-         stage('deploy') {
-            steps {
-                bat 'dotnet WebApi/bin/Release/netcoreapp2.2/WebApi.dll'
-            }
-        }
+         
     }
-    post{
-
- 
-success{
-
- 
-archiveArtifacts artifacts: '**', fingerprint:true
-
- 
-bat 'dotnet WebApi/bin/Release/netcoreapp2.2/WebApi.dll'
-
- 
-}
-
- 
-}
 }
