@@ -18,7 +18,6 @@ pipeline {
         stage('Publish') {
         	
         	steps{
-        		echo 'Publishing project'
         		bat 'dotnet publish'
         	}
         }
