@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -8,7 +8,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
 
-namespace WebApi
+namespace WebApplication10
 {
     public class Program
     {
@@ -19,6 +19,7 @@ namespace WebApi
 
         public static IWebHostBuilder CreateWebHostBuilder(string[] args) =>
             WebHost.CreateDefaultBuilder(args)
-                .UseStartup<Startup>()..UseUrls(urls: "http://*:3456");;
+                .UseStartup<Startup>()
+            .UseUrls(urls: "http://*:5678");
     }
 }
